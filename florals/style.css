@@ -1,0 +1,488 @@
+/* css Zen Garden*/
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Courgette&family=Forum&display=swap");
+h1 {
+  font: 300 4em "Forum";
+  color: #3d8589;
+  text-transform: uppercase;
+  margin: 0 0 0.5em;
+}
+
+h2 {
+  font-weight: 400;
+  font-family: "Courgette", cursive;
+  color: #3d8589;
+  margin: 0;
+}
+
+h3 {
+  font: 200 2.25em "Courgette", cursive;
+  padding: 0.5em 0 0.25em 0;
+}
+
+h4 {
+  font: 200 1.5em "Courgette", cursive;
+  margin: 0.5em 0;
+}
+
+p {
+  font: 1em/1.5em "Barlow", sans-serif;
+  padding: 0.5em 0;
+  margin: 0;
+}
+
+li {
+  color: rgba(51, 55, 69, 0.9);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  position: relative;
+  bottom: 0px;
+  color: #3d8589;
+  text-decoration: none;
+  font-family: "Forum";
+  transition: bottom 0.2s;
+}
+a:hover {
+  bottom: 5px;
+}
+
+.summary a {
+  color: #150606;
+  font-family: "Courgette", cursive;
+}
+.summary p {
+  font-family: "Courgette", cursive;
+  text-align: right;
+}
+
+.intro {
+  padding: 2%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 1em;
+  width: auto;
+  margin: auto;
+  background-color: #f8f5f9;
+  background-image: radial-gradient(white 15%, transparent 20%), radial-gradient(white 15%, transparent 20%);
+  background-size: 50px 50px;
+  background-position: 0 0, 30px 30px;
+}
+
+.page-wraher {
+  display: grid;
+  grid-template-columns: 22% 1fr 22%;
+  grid-gap: 1em;
+  text-align: center;
+}
+
+/*-------------------------------------------    
+	ANIMATIONS KEYFRAMES
+-------------------------------------------*/
+@keyframes image1 {
+  0% {
+    background-image: url(sunflower.png);
+  }
+  33% {
+    background-image: url(lightpinkpeony.png);
+  }
+  66% {
+    background-image: url(yellowflower.png);
+  }
+  100% {
+    background-image: url(pinkrose.png);
+  }
+}
+@keyframes image2 {
+  0% {
+    background-image: url(pinkrose.png);
+  }
+  33% {
+    background-image: url(peachpeony.png);
+  }
+  66% {
+    background-image: url(sunflower.png);
+  }
+  100% {
+    background-image: url(lightpinkpeony.png);
+  }
+}
+@keyframes image3 {
+  0% {
+    background-image: url(lightpinkpeony.png);
+  }
+  33% {
+    background-image: url(yellowflower.png);
+  }
+  66% {
+    background-image: url(peachpeony.png);
+  }
+  100% {
+    background-image: url(mediumpinkpeony.png);
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes appear-down {
+  0% {
+    top: -10%;
+  }
+  50% {
+    top: 30%;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes FADEY {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*-------------------------------------------    
+	ANIMATIONS 
+-------------------------------------------*/
+.intro {
+  animation-name: FADEY;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+[role=article] {
+  opacity: 0;
+  animation-name: FADEY;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+/*-------------------------------------------    
+	ADDED CONTENT WITH CSS
+-------------------------------------------*/
+#zen-preamble::before {
+  content: "";
+  background-image: url(singlerose.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-position: left center;
+  left: -230px;
+  animation: appear 5s linear infinite;
+}
+
+#zen-explanation::before {
+  content: "";
+  background-image: url(yellowflower.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-position: right center;
+  right: -255px;
+  animation: appear 5s linear infinite;
+}
+
+#zen-participation::before {
+  content: "";
+  background-image: url(lightpinkpeony.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-position: left center;
+  left: -260px;
+  animation: appear 5s linear infinite;
+}
+
+#zen-benefits::before {
+  content: "";
+  background-image: url(mediumpinkpeony.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-position: right center;
+  right: -270px;
+  animation: appear 5s linear infinite;
+}
+
+#zen-requirements::before {
+  content: "";
+  background-image: url(LongFlower.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-position: left center;
+  left: -320px;
+  filter: drop-shadow(10px 10px 10px rgba(239, 235, 235, 0.6));
+  animation: appear 5s linear infinite;
+}
+
+.design-selection::before {
+  animation: image1 10s infinite alternate;
+}
+
+.design-archives::before {
+  animation: image2 10s infinite alternate;
+}
+
+.zen-resources::before {
+  animation: image3 10s infinite alternate;
+}
+
+/*-------------------------------------------    
+	INTRO 
+-------------------------------------------*/
+.intro {
+  grid-column: 2/3;
+  background-image: url(banneropaque.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+}
+
+/*-------------------------------------------    
+	PREAMBLE 
+-------------------------------------------*/
+.preamble {
+  grid-column: 2/3;
+  position: relative;
+}
+.preamble::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 250px;
+  background-image: linear-gradient(24deg, hotpink, pink, rgb(186, 131, 204));
+  background-size: cover;
+  -webkit-mask: url(peony.png);
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+/*-------------------------------------------    
+	MAINSUPPORTING 
+-------------------------------------------*/
+.mainsupporting {
+  grid-column: 2/3;
+}
+
+.explanation,
+.participation,
+.benefits,
+.requirements {
+  position: relative;
+}
+
+/*-------------------------------------------    
+	SIDEBAR 
+-------------------------------------------*/
+.sidebar {
+  grid-column: 1/-1;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), #f4dee3);
+}
+
+.wrapper {
+  display: block;
+}
+
+.design-selection,
+.design-archives,
+.zen-resources {
+  text-align: center;
+}
+.design-selection::before,
+.design-archives::before,
+.zen-resources::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: relative;
+  top: 0px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+}
+.design-selection li,
+.design-archives li,
+.zen-resources li {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+h3.select,
+h3.archives,
+h3.resources {
+  font: 2rem "Forum";
+  text-align: center;
+  padding-bottom: 25px;
+  color: black;
+}
+
+.design-selection li {
+  color: #aaa;
+  font-style: italic;
+}
+
+a.design-name {
+  display: block;
+  font-size: 1.5rem;
+  font-style: normal;
+}
+
+a.designer-name {
+  font-style: normal;
+  font-weight: 100;
+}
+
+/*-------------------------------------------    
+		SMALL SCREEN
+-------------------------------------------*/
+@media screen and (max-width: 499px) {
+  body {
+    max-width: 499px;
+    margin: 0 auto;
+    padding: 1em;
+    background-size: 20px 20px;
+  }
+  .page-wraher {
+    display: block;
+  }
+  .intro {
+    background-image: url(banneropaque.png);
+    background-size: auto;
+    padding: 5px;
+  }
+  .preamble,
+  .mainsupporting,
+  .participation,
+  .benefits,
+  .requirements {
+    text-align: center;
+  }
+  .preamble p,
+  .mainsupporting p,
+  .participation p,
+  .benefits p,
+  .requirements p {
+    text-align: justify;
+  }
+  #zen-explanation::before,
+  #zen-preamble::before,
+  #zen-participation::before,
+  #zen-benefits::before,
+  #zen-requirements::before {
+    background-image: none;
+  }
+  a.design-name {
+    font-size: 1.25rem;
+  }
+  a.designer-name {
+    font-size: 1.05rem;
+  }
+}
+/*-------------------------------------------    
+		MEDIUM SCREEN
+-------------------------------------------*/
+@media screen and (min-width: 768px) {
+  .preamble {
+    grid-column: 2/3;
+    position: relative;
+  }
+  .preamble::after {
+    content: none;
+  }
+  .sidebar {
+    grid-column: 1/-1;
+    background-image: none;
+  }
+  .wrapper {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+  }
+  .design-selection,
+  .design-archives,
+  .zen-resources {
+    text-align: left;
+  }
+  .design-selection ul,
+  .design-archives ul,
+  .zen-resources ul {
+    background-color: #f4dee3;
+    padding: 10px 20px;
+    border-radius: 10px;
+    will-change: transform;
+    transition: transform 450ms;
+  }
+  .design-selection ul:hover,
+  .design-archives ul:hover,
+  .zen-resources ul:hover {
+    background-color: lightgray;
+    transform: translateY(25px);
+  }
+  a.design-name {
+    font-size: 1.25rem;
+  }
+}
+/*-------------------------------------------    
+	LARGE SCREEN
+-------------------------------------------*/
+@media screen and (min-width: 1200px) {
+  body {
+    padding: 2em;
+    width: 1000px;
+  }
+  .wrapper {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+  }
+  .design-selection li,
+  .design-archives li,
+  .zen-resources li {
+    font-size: 1rem;
+  }
+  a.design-name {
+    font-size: 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
