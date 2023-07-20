@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300&family=News+Cycle&family=Satisfy&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(purple 3px, transparent 4px), radial-gradient(purple 3px, transparent 4px), linear-gradient(#fff 4px, transparent 0), linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px), linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px), #fff;
+  background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.mycodelinks {
+  background-image: linear-gradient(to top, #f4edf6 0%, #e1e9fc 100%);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+.imgBox {
+  max-width: 600px;
+  margin: 15px auto;
+  display: flex;
+  background: #e1e9fc;
+  border-radius: 15px;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+#headShotImg {
+  border-radius: 15px;
+  height: 125px;
+  width: 95px;
+}
+
+h1 {
+  font-family: "Merienda", cursive;
+  text-align: center;
+  font-size: 48px;
+  color: #000080;
+  padding: 25px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #000080;
+  text-shadow: 0 0 2px whitesmoke;
+  padding: 5px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+ul {
+  text-align: left;
+  list-style: inside;
+  font-size: 24px;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  color: navy;
+  padding: 15px;
+}
+
+a:hover {
+  color: darkcyan;
+}/*# sourceMappingURL=styles.css.map */
